@@ -24,7 +24,7 @@ export class HireService {
             currentUser = environment.currentUser;
         }
         //const url = `http://localhost:8080/fetchAllMyPositions/${currentUser}`;
-        const url = `http://ecstacy-demo-project.azurewebsites.net/fetchAllMyPositions/${currentUser}`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/fetchAllMyPositions/${currentUser}`;
         //const url = `${ASSET_URL}/${currentUser}.json`;
         return this.httpClient.get(url).pipe(map((data: any) => {
             //this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
@@ -35,7 +35,7 @@ export class HireService {
 
     fetchCandidatesScreened(pid: string) {
         //const url = `http://localhost:8080/fetchResumeToPosition/${pid}`;
-        const url = `http://ecstacy-demo-project.azurewebsites.net/fetchResumeToPosition/${pid}`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/fetchResumeToPosition/${pid}`;
         //const url = `${ASSET_URL}/posDetails${pid}.json`;
         return this.httpClient.get(url).pipe(map((data: any) => {
             //this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
@@ -50,7 +50,7 @@ export class HireService {
           //  return data;
         //}));
         //return of();
-        const url = `http://ecstacy-demo-project.azurewebsites.net/addResumeToPosition`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/addResumeToPosition`;
         return this.httpClient.post(url, candidate).pipe(map((data: any) => {
             return data;
         }));
