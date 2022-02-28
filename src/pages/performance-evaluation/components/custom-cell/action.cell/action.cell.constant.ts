@@ -4,6 +4,6 @@ export enum RECORD_STATE{
 }
 
 export enum BUTTON_NAME {
-    Edit='Edit',
+    Edit='Perform Review',
     View='View'
 }

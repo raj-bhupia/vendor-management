@@ -19,7 +19,7 @@ export class ContigentService {
 
     getContigentPE(userId: string) {
         //return this.httpClient.get(`${ASSET_URL}/questions-list/${userId}.json`);
-        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/retrieve?msID=${userId}`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/estacy/retrieve?msID=${userId}`;
         return this.httpClient.get(url).pipe(map((data: any) => {
             return data;
         }));
@@ -33,7 +33,7 @@ export class ContigentService {
         // return of().pipe(tap(() => {
         //     this.userService.fetchUserInfo()
         // }));;
-        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
         return this.httpClient.post(url, payload).pipe(map((data: any) => {
             return data;
         }));
@@ -46,7 +46,7 @@ export class ContigentService {
         // return of().pipe(tap(() => {
         //     this.userService.fetchUserInfo()
         // }));
-        const url = `http://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
+        const url = `https://ecstacy-demo-project.azurewebsites.net/estacy/submit`;
         return this.httpClient.post(url, payload).pipe(map((data: any) => {
             return data;
         }));

@@ -23,7 +23,7 @@ export class UserService {
         }
         //const url = `http://localhost:8080/rest/reviewer/getContingents/${currentUser}`;
         //const url = `${ASSET_URL}/${currentUser}.json`;
-        const url = `http://ecstasy-performance-review.azurewebsites.net/rest/reviewer/getContingents/${currentUser}`;
+        const url = `https://ecstasy-performance-review.azurewebsites.net/rest/reviewer/getContingents/${currentUser}`;
         this.httpClient.get(url).subscribe((data: any) => {
             this.userInfo.next(data?.people?.reviewerInfo as UserInfoType);
         })
